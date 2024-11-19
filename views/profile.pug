@@ -1,0 +1,26 @@
+extends layout.pug
+
+block content
+  .container
+    h4 User Profile
+    if error
+      .alert.alert-danger= error
+    else if user
+      .profile-info.mt-4
+        h5 Personal Information:
+        p
+          strong Name: 
+          | #{user.name}
+        p
+          strong Email: 
+          | #{user.email}
+        p
+          strong Member Since: 
+          | #{user.createdAt.toDateString()}
+        
+        
+    else
+      .alert.alert-warning
+        | No user data available.
+
+    a.btn.btn-primary.mt-3(href="/") Back to Dashboard

@@ -1,0 +1,13 @@
+extends layout.pug
+
+block content
+  .container
+    h4 Dashboard
+    span Only authenticated users can view this dashboard view.
+
+    a.btn.btn-outline-danger(href="/logout") Logout
+
+    a(href= '/changepass').ps-2 change password
+
+    a.btn.btn-outline-danger(href="/profile") profile 
+    
